@@ -17,7 +17,8 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   hostname: 'localhost',
   port: 9001,
   //path: '/mqtt',
-  path: '',
+  //path: '',
+  //url: 'ws://192.168.1.11:9001'
 };
 
 @NgModule({
@@ -34,7 +35,7 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
 export class AppModule {}
 
 @Component({
-  template: ` <h1>ALGO</h1> `,
+  template: ` <h1></h1> `,
 })
 export class ExampleComponent implements OnDestroy {
   private subscription: Subscription;
@@ -42,7 +43,7 @@ export class ExampleComponent implements OnDestroy {
 
   constructor(private _mqttService: MqttService) {
     this.subscription = this._mqttService
-      .observe('my/topic')
+      .observe('expulse')
       .subscribe((message: IMqttMessage) => {
         this.message = message.payload.toString();
       });
