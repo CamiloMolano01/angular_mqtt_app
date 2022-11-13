@@ -1,20 +1,28 @@
 <table>
   <tr>
-      <td>Topic: </td>
-      <td><input [(ngModel)]="topicname" type="text" /></td>
-      <td><button type="button" (click)="subscribeNewTopic()">Subscribe Topic</button></td>
+    <td>Topic:</td>
+    <td><input [(ngModel)]="topicname" type="text" /></td>
+    <td>
+      <button type="button" (click)="subscribeNewTopic()">
+        Subscribe Topic
+      </button>
+    </td>
   </tr>
   <tr>
-      <td>Message: </td>
-      <td><input [(ngModel)]="msg" type="text" /></td>
-      <td><button type="button" (click)="sendmsg()">Send</button></td>
+    <td>Message:</td>
+    <td><input [(ngModel)]="msg" type="text" /></td>
+    <td><button type="button" (click)="sendmsg()">Send</button></td>
   </tr>
   <tr>
-      <td></td>
-      <td>&nbsp;&nbsp;<button type="button" (click)="clear()">Clear Log</button></td>
-      <td></td>
+    <td></td>
+    <td>
+      &nbsp;&nbsp;<button type="button" (click)="clear()">Clear Log</button>
+    </td>
+    <td></td>
   </tr>
 </table>
+<button type="button" (click)="send1Action()">Expulse Liquid!</button>
+<br>
+<button type="button" (click)="send2Action()">Move Water!</button>
 <br /><br />
-<div #msglog>
-</div>
+<div #msglog></div>
