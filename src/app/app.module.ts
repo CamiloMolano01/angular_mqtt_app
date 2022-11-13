@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { Observable, Subscription } from 'rxjs';
+import { NgChartsModule } from 'ng2-charts';
 
 import {
   IMqttMessage,
@@ -28,6 +29,7 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     AppRoutingModule,
     FormsModule,
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS),
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
