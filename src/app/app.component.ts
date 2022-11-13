@@ -57,7 +57,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   send1Action(): void {
     // use unsafe publish for non-ssl websockets
-    this._mqttService.unsafePublish('expulse', '3', {
+    this._mqttService.unsafePublish('chiku/team/expulse', '3', {
       qos: 1,
       retain: true,
     });
@@ -67,7 +67,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   send2Action(): void {
     // use unsafe publish for non-ssl websockets
-    this._mqttService.unsafePublish('move', '5', {
+    this._mqttService.unsafePublish('chiku/team/move', '5', {
       qos: 1,
       retain: true,
     });
@@ -76,7 +76,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   send3Action(): void {
     // use unsafe publish for non-ssl websockets
-    this._mqttService.unsafePublish('llave', '7', {
+    this._mqttService.unsafePublish('chiku/team/llave', '7', {
       qos: 1,
       retain: true,
     });

@@ -14,11 +14,14 @@ import {
 } from 'ngx-mqtt';
 
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
-  hostname: 'localhost',
-  port: 9001,
+  //hostname: 'localhost',
+  //port: 9001,
   //path: '/mqtt',
   //path: '',
   //url: 'ws://192.168.1.11:9001'
+  hostname: 'test.mosquitto.org',
+  protocol: 'ws',
+  port: 8080,
 };
 
 @NgModule({
