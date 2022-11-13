@@ -74,6 +74,15 @@ export class AppComponent implements OnInit, OnDestroy {
     this.msg = '';
   }
 
+  send3Action(): void {
+    // use unsafe publish for non-ssl websockets
+    this._mqttService.unsafePublish('llave', '7', {
+      qos: 1,
+      retain: true,
+    });
+    this.msg = '';
+  }
+
   logMsg(message: string): void {
     this.msglog.nativeElement.innerHTML += '<br><hr>' + message;
   }
