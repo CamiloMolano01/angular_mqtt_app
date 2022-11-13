@@ -1,6 +1,6 @@
 import { Component, NgModule, OnDestroy } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -17,7 +17,8 @@ import {
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   hostname: 'localhost',
   port: 9001,
-  path: '/mqtt'
+  //path: '/mqtt',
+  path: ''
 };
 
 @NgModule({
@@ -27,6 +28,7 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     MqttModule.forRoot(MQTT_SERVICE_OPTIONS)
   ],
   providers: [],
