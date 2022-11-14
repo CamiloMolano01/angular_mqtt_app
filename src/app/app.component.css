@@ -1,5 +1,9 @@
-.centrar{
+.centrar {
   display: flex;
   justify-content: center;
   position: relative;
+}
+
+img {
+  width: 20rem;
 }

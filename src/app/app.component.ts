@@ -69,7 +69,7 @@ export class AppComponent implements OnInit, OnDestroy {
       retain: true,
     });
     this.msg = '';
-    this.logMsg('cualquiera');
+    //this.logMsg('cualquiera');
   }
 
   send2Action(): void {
