@@ -24,7 +24,7 @@ export class AppComponent implements OnInit, OnDestroy {
   isConnected: boolean = false;
   @ViewChild('msglog', { static: true })
   msglog!: ElementRef;
-  nivelAgua: number[] = [10, 18];
+  nivelAgua: number[] = [-1, -18];
   number: number = 0;
   tabla: boolean = false;
 
@@ -47,12 +47,9 @@ export class AppComponent implements OnInit, OnDestroy {
       .subscribe((message: any) => {
         var arr = new Uint8Array(message['payload']);
         this.number = Number(enc.decode(arr));
-        this.nivelAgua.push(this.number);
+        this.nivelAgua.push(-this.number);
         this.tabla = true;
         this.chart?.update();
-        // if (this.nivelAgua.length == 30) {
-        //   this.chart?.update();
-        // }
       });
   }
 
